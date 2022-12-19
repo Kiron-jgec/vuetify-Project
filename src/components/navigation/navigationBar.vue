@@ -113,6 +113,11 @@ export default {
 
         { name: "About", icon: "mdi-information", linkData: "/about" },
         { name: "Profile", icon: "mdi-account-circle", linkData: "/profile" },
+        {
+          name: "Notification",
+          icon: "mdi-bell-badge-outline",
+          linkData: "/notifications",
+        },
         { name: "Login", icon: "mdi-login", linkData: "/login" },
         { name: "Sign Up", icon: "mdi-account-plus", linkData: "/signup" },
       ],
@@ -141,3 +146,24 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+::-webkit-scrollbar {
+  width: 10px !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+</style>

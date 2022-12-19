@@ -3,16 +3,32 @@
     <h1 class="subheading grey--text ma-3">Profile</h1>
 
     <p>{{ errors }}</p>
-    <p>{{ successMsg }}</p>
+    <!-- <p>{{ successMsg }}</p>
+     -->
+
+    {{ randomData }}
   </div>
 </template>
 
 <script>
 import axios from "axios";
 export default {
+  sockets: {
+    connect: function() {
+      console.log("socket to notification channel connected");
+    },
+
+    // get data from server
+    getData: function(data) {
+      console.log("data", data);
+      this.randomData = data;
+    },
+  },
+
   data: () => ({
     errors: null,
     successMsg: null,
+    randomData: null,
   }),
   created() {
     this.getProfileData();

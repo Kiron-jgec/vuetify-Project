@@ -8,6 +8,7 @@ import team from "../views/team.vue";
 import login from "../views/login.vue";
 import signup from "../views/signup.vue";
 import profile from "../views/profile.vue";
+import sockettest from "../views/Sockettest.vue";
 
 Vue.use(VueRouter);
 
@@ -52,6 +53,11 @@ const routes = [
     path: "/profile",
     name: "profile",
     component: profile,
+  },
+  {
+    path: "/notifications",
+    name: "socket-text",
+    component: sockettest,
   },
 ];
 
