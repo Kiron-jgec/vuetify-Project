@@ -9,6 +9,7 @@ import login from "../views/login.vue";
 import signup from "../views/signup.vue";
 import profile from "../views/profile.vue";
 import sockettest from "../views/Sockettest.vue";
+import webhooktest from "../views/WebhookTest.vue";
 
 Vue.use(VueRouter);
 
@@ -58,6 +59,11 @@ const routes = [
     path: "/notifications",
     name: "socket-text",
     component: sockettest,
+  },
+  {
+    path: "/webhook-test",
+    name: "webhook-test",
+    component: webhooktest,
   },
 ];
 

@@ -118,6 +118,11 @@ export default {
           icon: "mdi-bell-badge-outline",
           linkData: "/notifications",
         },
+        {
+          name: "Webhook test",
+          icon: "mdi-webhook",
+          linkData: "/webhook-test",
+        },
         { name: "Login", icon: "mdi-login", linkData: "/login" },
         { name: "Sign Up", icon: "mdi-account-plus", linkData: "/signup" },
       ],

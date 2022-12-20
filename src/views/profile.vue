@@ -5,7 +5,9 @@
     <p>{{ errors }}</p>
     <!-- <p>{{ successMsg }}</p>
      -->
-
+    <v-btn @click="getProfileData()">
+      Get Data
+    </v-btn>
     {{ randomData }}
   </div>
 </template>
@@ -14,12 +16,12 @@
 import axios from "axios";
 export default {
   sockets: {
-    connect: function() {
+    connnection: function() {
       console.log("socket to notification channel connected");
     },
 
     // get data from server
-    getData: function(data) {
+    user: function(data) {
       console.log("data", data);
       this.randomData = data;
     },
@@ -28,11 +30,11 @@ export default {
   data: () => ({
     errors: null,
     successMsg: null,
-    randomData: null,
+    randomData: [],
   }),
-  created() {
-    this.getProfileData();
-  },
+  // created() {
+  //   this.getProfileData();
+  // },
   methods: {
     async getProfileData() {
       try {
